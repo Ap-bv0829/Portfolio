@@ -157,9 +157,39 @@ section { padding: 4rem 0; }
   overflow-x: auto;
 }
 
-.code-block pre {
-  white-space: pre-wrap;
-  word-break: break-word;
+.data-row {
+  margin-bottom: 0.8rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.data-row:last-child {
+  margin-bottom: 0;
+}
+
+.key {
+  color: var(--secondary);
+  font-weight: bold;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.value {
+  color: var(--text-main);
+  padding-left: 0.5rem;
+  border-left: 2px solid var(--border);
+  margin-top: 0.2rem;
+}
+
+@media (min-width: 600px) {
+  .data-row {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .key {
+    min-width: 120px;
+  }
 }
 
 .contact-list {
@@ -243,6 +273,27 @@ input:focus, textarea:focus {
 }
 
 /* Projects */
+.project-item h3 {
+  font-size: 1.8rem;
+  margin: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.project-item h3::before {
+  content: ">";
+  color: var(--secondary);
+}
+
+.filename-tag {
+  font-size: 0.8rem;
+  color: var(--secondary);
+  background: rgba(0, 209, 255, 0.1);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: normal;
+}
 .project-item {
   margin-bottom: 3rem;
   border-left: 3px solid var(--primary);
