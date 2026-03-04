@@ -47,17 +47,23 @@ styleSheet.innerText = revealStyles;
 document.head.appendChild(styleSheet);
 
 // Typing effect for Hero
-const title = document.querySelector("h1");
-const text = title.innerText;
-title.innerText = "";
-let i = 0;
+const title = document.querySelector("#hero-title");
+if (title) {
+  const fullText = "Anna Patricia Bolor Vida";
+  const cursor = title.querySelector(".cursor");
+  title.innerHTML = `<span class="text"></span>`;
+  title.appendChild(cursor);
+  
+  const textContainer = title.querySelector(".text");
+  let i = 0;
 
-function type() {
-  if (i < text.length) {
-    title.innerText += text.charAt(i);
-    i++;
-    setTimeout(type, 100);
+  function type() {
+    if (i < fullText.length) {
+      textContainer.textContent += fullText.charAt(i);
+      i++;
+      setTimeout(type, 80);
+    }
   }
-}
 
-window.addEventListener("load", type);
+  window.addEventListener("load", type);
+}

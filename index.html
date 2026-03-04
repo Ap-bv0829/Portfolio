@@ -9,13 +9,23 @@
   </head>
   <body>
     <nav>
-      <a href="#" class="logo">>_ root@apv:~#</a>
-      <div class="nav-items">
-        <a href="#about">~/about</a>
-        <a href="#skills">~/skills</a>
-        <a href="#projects">~/projects</a>
-        <a href="#achievements">~/certs</a>
-        <a href="#contact">~/contact</a>
+      <div class="nav-left">
+        <a href="#" class="logo">>_ root@apv:~#</a>
+        <div class="nav-items">
+          <a href="#about">~/about</a>
+          <a href="#skills">~/skills</a>
+          <a href="#projects">~/projects</a>
+          <a href="#achievements">~/certs</a>
+          <a href="#contact">~/contact</a>
+        </div>
+      </div>
+      <div class="nav-right">
+        <div class="nav-profile-thumb">
+          <img src="/profile.jpg" alt="Anna Patricia Vida">
+        </div>
+        <a href="/resume.pdf" target="_blank" class="btn-resume">
+          <i class="fas fa-download"></i> ./resume.sh
+        </a>
       </div>
     </nav>
 
@@ -29,13 +39,12 @@
             <span class="dot dot-green"></span>
           </div>
           <div class="terminal-content">
-            <p><span class="prompt">guest@system:~$</span> <span class="cmd">whoami</span></p>
-            <h1>Anna Patricia Bolor Vida</h1>
+            <p><span class="prompt">> guest@system:~$</span> <span class="cmd">whoami</span></p>
+            <h1 id="hero-title">Anna Patricia Bolor Vida<span class="cursor">█</span></h1>
             <p><span class="prompt">></span> <span class="cmd" style="color: var(--secondary)">BS Information Technology Student</span></p>
             <p class="comment">/* Passionate developer crafting innovative solutions through clean code, modern technologies, and continuous learning. */</p>
             <div class="cta-group" style="margin-top: 2rem;">
               <a href="#projects" class="btn-cmd">./execute_projects.sh</a>
-              <a href="/resume.pdf" target="_blank" class="btn-cmd btn-outline">cat resume.pdf</a>
               <a href="#contact" class="btn-cmd btn-outline">ping --contact</a>
             </div>
           </div>
@@ -45,43 +54,80 @@
       <!-- About Section -->
       <section id="about">
         <h2>$ about --me</h2>
-        <div class="terminal-window reveal-on-scroll">
-          <div class="terminal-content">
-            <div class="about-grid">
-              <div class="about-avatar">
-                 <p class="comment">// avatar.bin</p>
-                 <div class="profile-frame">
-                   <img src="/profile.jpg" alt="Anna Patricia Vida" onerror="this.src='https://via.placeholder.com/250?text=Portrait'" style="filter: grayscale(0.5) contrast(1.2);">
-                   <div class="scanline"></div>
-                 </div>
-              </div>
-              <div class="about-details">
-                <p class="comment">// character.profile</p>
-                <div class="code-block">
-                  <div class="data-row">
-                    <span class="key">Name:</span>
-                    <span class="value">Anna Patricia Bolor Vida</span>
-                  </div>
-                  <div class="data-row">
-                    <span class="key">Role:</span>
-                    <span class="value">BS Information Technology Student</span>
-                  </div>
-                  <div class="data-row">
-                    <span class="key">Objective:</span>
-                    <span class="value">Fresh graduate seeking a challenging role in software development. Committed to continuous learning and contributing to meaningful projects.</span>
-                  </div>
+        
+        <div class="about-grid-top">
+          <!-- Profile Block -->
+          <div class="terminal-window reveal-on-scroll">
+            <div class="terminal-header"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+            <div class="terminal-content">
+              <div class="profile-container">
+                <div class="profile-frame">
+                  <img src="/profile.jpg" alt="Anna Patricia Vida">
+                  <div class="profile-badge">&lt;/&gt;</div>
                 </div>
               </div>
-              <div class="about-contact">
-                <p class="comment">// contact_info.json</p>
-                <ul class="contact-list">
-                  <li><i class="fas fa-map-marker-alt"></i> No. 61 Palosapis Street, Project 3, Quezon City</li>
-                  <li><i class="fas fa-envelope"></i> qapvida01@tip.edu.ph</li>
-                  <li><i class="fas fa-envelope"></i> annapatriciavida12@gmail.com</li>
-                  <li><i class="fas fa-phone"></i> +63 945 870 9064</li>
-                  <li><i class="fas fa-university"></i> TIP QC</li>
-                </ul>
+            </div>
+          </div>
+
+          <!-- Developer Object Block -->
+          <div class="terminal-window reveal-on-scroll">
+            <div class="terminal-header"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+            <div class="terminal-content">
+              <div class="code-block" style="border: none; background: transparent; padding: 0;">
+                <p><span style="color: #c678dd;">const</span> <span style="color: #61afef;">developer</span> = {</p>
+                <div style="padding-left: 20px;">
+                  <p><span style="color: #61afef;">name</span>: <span style="color: #98c379;">"Anna Patricia Bolor Vida"</span>,</p>
+                  <p><span style="color: #61afef;">role</span>: <span style="color: #98c379;">"BS Information Technology Student"</span>,</p>
+                  <p><span style="color: #61afef;">internship</span>: <span style="color: #98c379;">"Ateneo Innovation Center"</span>,</p>
+                  <p><span style="color: #61afef;">objective</span>: `</p>
+                  <p style="color: #98c379; padding-left: 10px;">
+                    Fresh graduate with a Bachelor of Science in Information Technology seeking a challenging role in software development. 
+                    Eager to apply my technical skills, project experience, and passion for innovation in a professional environment. 
+                    Committed to continuous learning and contributing to meaningful projects.
+                  </p>
+                  <p>`</p>
+                </div>
+                <p>}</p>
               </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-grid-bottom">
+          <!-- Contact Block -->
+          <div class="terminal-window reveal-on-scroll">
+            <div class="terminal-header"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+            <div class="terminal-content">
+              <p class="prompt">>_ contact_info.json</p>
+              <hr style="border: 0; border-top: 1px solid var(--border); margin: 10px 0;">
+              <ul class="contact-list" style="font-size: 0.85rem;">
+                <li><i class="fas fa-map-marker-alt"></i> "No. 61 Palosapis Street, Project 3, Quezon City"</li>
+                <li><i class="fas fa-envelope"></i> "qapvida01@tip.edu.ph"</li>
+                <li><i class="fas fa-envelope"></i> "annapatriciavida12@gmail.com"</li>
+                <li><i class="fas fa-phone"></i> "+63 945 870 9064"</li>
+                <hr style="border: 0; border-top: 1px solid var(--border); margin: 10px 0;">
+                <li><i class="fas fa-university"></i> "Technological Institute of the Philippines - Quezon City"</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Software Dev Block -->
+          <div class="terminal-window reveal-on-scroll">
+            <div class="terminal-header"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+            <div class="terminal-content">
+              <p style="color: var(--primary); font-size: 1.2rem; margin-bottom: 0.5rem;">&lt;/&gt;</p>
+              <p style="color: var(--primary); font-weight: bold; margin-bottom: 0.5rem;">> Software_Dev</p>
+              <p class="comment" style="font-size: 0.85rem;">Passionate about building robust web and mobile applications.</p>
+            </div>
+          </div>
+
+          <!-- Continuous Learner Block -->
+          <div class="terminal-window reveal-on-scroll">
+            <div class="terminal-header"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+            <div class="terminal-content">
+              <p style="color: var(--secondary); font-size: 1.2rem; margin-bottom: 0.5rem;"><i class="fas fa-bolt"></i></p>
+              <p style="color: var(--primary); font-weight: bold; margin-bottom: 0.5rem;">> Continuous_Learner</p>
+              <p class="comment" style="font-size: 0.85rem;">Always exploring new technologies, AI/ML, and cybersecurity.</p>
             </div>
           </div>
         </div>
@@ -91,39 +137,83 @@
       <section id="skills">
         <h2>$ sysinfo --tech</h2>
         <div class="skills-grid">
-          <div class="skill-category glass reveal-on-scroll">
-            <h3>[web_dev]</h3>
+          <!-- Web Dev -->
+          <div class="skill-category reveal-on-scroll">
+            <h3><i class="fas fa-window-maximize"></i> [web_dev]</h3>
             <div class="skill-tags">
               <span class="skill-tag">HTML</span> <span class="skill-tag">CSS</span> <span class="skill-tag">JavaScript</span>
-              <span class="skill-tag">Bootstrap</span> <span class="skill-tag">React JS</span> <span class="skill-tag">Vue.js</span>
-              <span class="skill-tag">Angular</span> <span class="skill-tag">JQuery</span> <span class="skill-tag">React Native</span>
-              <span class="skill-tag">PHP</span> <span class="skill-tag">Node.js</span> <span class="skill-tag">REST API</span>
+              <span class="skill-tag">Bootstrap</span> <span class="skill-tag">React.js</span> <span class="skill-tag">Vue.js</span>
+              <span class="skill-tag">Angular</span> <span class="skill-tag">jQuery</span> <span class="skill-tag">React Native</span>
+              <span class="skill-tag">PHP</span> <span class="skill-tag">Node.js</span> <span class="skill-tag">Python</span> <span class="skill-tag">Java</span>
+              <span class="skill-tag">REST API</span>
             </div>
           </div>
 
-          <div class="skill-category glass reveal-on-scroll">
-            <h3>[languages]</h3>
+          <!-- Languages -->
+          <div class="skill-category reveal-on-scroll">
+            <h3><i class="fas fa-code"></i> [languages]</h3>
             <div class="skill-tags">
-              <span class="skill-tag">Python</span> <span class="skill-tag">C</span> <span class="skill-tag">C++</span>
-              <span class="skill-tag">Java</span> <span class="skill-tag">R</span> <span class="skill-tag">Dart/Flutter</span>
-              <span class="skill-tag">Ruby</span> <span class="skill-tag">Arduino/Wiring</span> <span class="skill-tag">Bash Scripting</span>
+              <span class="skill-tag">Python</span> <span class="skill-tag">C</span> <span class="skill-tag">C++</span> <span class="skill-tag">Java</span> <span class="skill-tag">R</span>
+              <span class="skill-tag">Dart/Flutter</span> <span class="skill-tag">Ruby</span> <span class="skill-tag">PHP</span>
+              <span class="skill-tag">Arduino/Wiring</span> <span class="skill-tag">Bash Scripting</span>
             </div>
           </div>
 
-          <div class="skill-category glass reveal-on-scroll">
-            <h3>[ai_ml]</h3>
+          <!-- Databases -->
+          <div class="skill-category reveal-on-scroll">
+            <h3><i class="fas fa-database"></i> [databases]</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">MySQL</span> <span class="skill-tag">Supabase/PostgreSQL</span>
+              <span class="skill-tag">Firebase</span>
+            </div>
+          </div>
+
+          <!-- OS Environments -->
+          <div class="skill-category reveal-on-scroll">
+            <h3><i class="fas fa-desktop"></i> [os_environments]</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Windows</span> <span class="skill-tag">Ubuntu</span> <span class="skill-tag">Linux</span>
+              <span class="skill-tag">Kali Linux</span>
+            </div>
+          </div>
+
+          <!-- AI/ML -->
+          <div class="skill-category reveal-on-scroll">
+            <h3><i class="fas fa-brain"></i> [ai_ml]</h3>
             <div class="skill-tags">
               <span class="skill-tag">1D CNN & LSTM</span> <span class="skill-tag">Gesture Recognition</span>
-              <span class="skill-tag">Data Preprocessing</span> <span class="skill-tag">Real-time AI Handling</span>
+              <span class="skill-tag">Data Preprocessing</span> <span class="skill-tag">Real-Time AI Data Handling</span>
               <span class="skill-tag">TensorFlow</span>
             </div>
           </div>
 
-          <div class="skill-category glass reveal-on-scroll">
-            <h3>[cybersecurity]</h3>
+          <!-- Cybersecurity -->
+          <div class="skill-category reveal-on-scroll">
+            <h3><i class="fas fa-shield-alt"></i> [cybersecurity]</h3>
             <div class="skill-tags">
               <span class="skill-tag">Wireshark</span> <span class="skill-tag">Nmap</span> <span class="skill-tag">Burp Suite</span>
-              <span class="skill-tag">John the Ripper</span> <span class="skill-tag">ELK Stack</span> <span class="skill-tag">Wazuh</span>
+              <span class="skill-tag">John the Ripper</span> <span class="skill-tag">ELK Stack</span>
+              <span class="skill-tag">Wazuh</span>
+            </div>
+          </div>
+
+          <!-- Tools/VCS -->
+          <div class="skill-category reveal-on-scroll">
+            <h3><i class="fas fa-pen-nib"></i> [tools_vcs]</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Figma</span> <span class="skill-tag">Canva</span> <span class="skill-tag">Draw.io/Lucidchart</span>
+              <span class="skill-tag">Unity</span> <span class="skill-tag">GitHub</span> <span class="skill-tag">Google Colab</span>
+            </div>
+          </div>
+
+          <!-- Soft Skills -->
+          <div class="skill-category reveal-on-scroll">
+            <h3><i class="fas fa-users"></i> [soft_skills]</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Problem Solving</span> <span class="skill-tag">Analytical Thinking</span>
+              <span class="skill-tag">Time Management</span> <span class="skill-tag">Teamwork & Collaboration</span>
+              <span class="skill-tag">Effective Communication</span> <span class="skill-tag">Adaptability</span>
+              <span class="skill-tag">Continuous Learning</span> <span class="skill-tag">Documentation</span>
             </div>
           </div>
         </div>
@@ -132,32 +222,84 @@
       <!-- Projects Section -->
       <section id="projects">
         <h2>$ ls -la ./projects</h2>
-        <div class="terminal-window reveal-on-scroll">
-          <div class="terminal-content">
-            <div class="project-item">
-              <div class="project-meta">drwxr-xr-x  [2025-2026]  8.4kb</div>
-              <h3>EchoWear <span class="filename-tag">./EchoWear.exe</span></h3>
-              <p>Smart Glove Translator for Two-Way FSL Communication using LSTM Algorithm. A gesture-to-speech wearable device designed for deaf and mute users.</p>
-              <div class="project-tags">
-                <span class="skill-tag">Python</span> <span class="skill-tag">TensorFlow Lite</span> <span class="skill-tag">LSTM</span> <span class="skill-tag">Supabase</span>
+        
+        <div class="skills-grid"> <!-- Reusing skills-grid for 2-column project layout -->
+          <!-- EchoWear -->
+          <div class="terminal-window reveal-on-scroll">
+            <div class="terminal-header"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+            <div class="terminal-content">
+              <div class="project-item">
+                <h3><i class="fas fa-wave-square"></i> ./EchoWear.exe</h3>
+                <p class="comment" style="font-size: 0.8rem; margin-bottom: 0.5rem; color: #ff00ff;"># Smart Glove Translator for Two-Way FSL Communication Using LSTM Algorithm (2025-2026)</p>
+                <p style="font-size: 0.9rem;">A gesture-to-speech wearable device designed for deaf and mute users. Involved setting up Supabase, training Machine Learning models for FSL/ASL, converting models to TensorFlow Lite, and handling hardware assembly and testing.</p>
+                <div class="project-tags">
+                  <span class="project-meta">deps:</span>
+                  <span class="skill-tag">Python</span> <span class="skill-tag">TensorFlow Lite</span> <span class="skill-tag">LSTM</span> <span class="skill-tag">Supabase</span> <span class="skill-tag">Hardware/Sensors</span> <span class="skill-tag">C++</span>
+                </div>
               </div>
             </div>
+          </div>
 
-            <div class="project-item">
-              <div class="project-meta">drwxr-xr-x  [2024-2025]  12.1kb</div>
-              <h3>PocketHive <span class="filename-tag">./PocketHive.app</span></h3>
-              <p>AI-Powered Personal Finance and Expense Management. Comprehensive mobile budgeting application with bill reminders and payment tracker.</p>
-              <div class="project-tags">
-                <span class="skill-tag">React Native</span> <span class="skill-tag">Firebase Auth</span> <span class="skill-tag">Realtime DB</span>
+          <!-- PocketHive -->
+          <div class="terminal-window reveal-on-scroll">
+            <div class="terminal-header"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+            <div class="terminal-content">
+              <div class="project-item blue-theme">
+                <h3 style="color: var(--secondary);"><i class="fas fa-layer-group"></i> ./PocketHive.app</h3>
+                <p class="comment" style="font-size: 0.8rem; margin-bottom: 0.5rem; color: var(--secondary);"># AI-Powered Personal Finance and Expense Management (2024-2025)</p>
+                <p style="font-size: 0.9rem;">A comprehensive mobile budgeting application. Developed the Bill Reminder and Payment Tracker pages, and successfully integrated Firebase Authentication and Realtime Database for secure user data management.</p>
+                <div class="project-tags">
+                  <span class="project-meta">deps:</span>
+                  <span class="skill-tag">React Native</span> <span class="skill-tag">Firebase Auth</span> <span class="skill-tag">Firebase DB</span> <span class="skill-tag">JavaScript</span> <span class="skill-tag">AI Integration</span>
+                </div>
               </div>
             </div>
+          </div>
 
-            <div class="project-item">
-              <div class="project-meta">drwxr-xr-x  [2024-2025]  5.6kb</div>
-              <h3>MediMate <span class="filename-tag">./MediMate.sh</span></h3>
-              <p>Healthcare & Medical Assistance Platform. AI-powered Prescription Scanner designed to assist elders in understanding medical content.</p>
-              <div class="project-tags">
-                <span class="skill-tag">TypeScript</span> <span class="skill-tag">Node.js</span> <span class="skill-tag">PostgreSQL</span>
+          <!-- PourDecision -->
+          <div class="terminal-window reveal-on-scroll">
+            <div class="terminal-header"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+            <div class="terminal-content">
+              <div class="project-item">
+                <h3 style="color: #ff00ff;"><i class="fas fa-cog"></i> ./PourDecision.sys</h3>
+                <p class="comment" style="font-size: 0.8rem; margin-bottom: 0.5rem; color: #ff00ff;"># Smart Liquor Consumption Tracking System (2024-2025)</p>
+                <p style="font-size: 0.9rem;">A smart monitoring system for liquor consumption. Developed core features including Login, Sign-Up, Checkout, and Admin dashboard pages. Implemented Location API and Age Verification functionalities.</p>
+                <div class="project-tags">
+                  <span class="project-meta">deps:</span>
+                  <span class="skill-tag">React</span> <span class="skill-tag">Node.js</span> <span class="skill-tag">Location API</span> <span class="skill-tag">Express</span> <span class="skill-tag">MongoDB</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- MediMate -->
+          <div class="terminal-window reveal-on-scroll">
+            <div class="terminal-header"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+            <div class="terminal-content">
+              <div class="project-item">
+                <h3 style="color: var(--primary);"><i class="fas fa-heartbeat"></i> ./MediMate.sh</h3>
+                <p class="comment" style="font-size: 0.8rem; margin-bottom: 0.5rem; color: var(--primary);"># Healthcare & Medical Assistance Platform</p>
+                <p style="font-size: 0.9rem;">A modern healthcare application designed to assist users with medical tracking, appointments, and health monitoring. Focuses on accessible UI/UX and secure patient data handling.</p>
+                <div class="project-tags">
+                  <span class="project-meta">deps:</span>
+                  <span class="skill-tag">React</span> <span class="skill-tag">Tailwind CSS</span> <span class="skill-tag">Node.js</span> <span class="skill-tag">PostgreSQL</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ClarifyApp -->
+          <div class="terminal-window reveal-on-scroll">
+            <div class="terminal-header"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+            <div class="terminal-content">
+              <div class="project-item blue-theme">
+                <h3 style="color: var(--secondary);"><i class="fas fa-terminal"></i> ./ClarifyApp.iot <span style="float: right; opacity: 0.5;"><i class="fab fa-github"></i></span></h3>
+                <p class="comment" style="font-size: 0.8rem; margin-bottom: 0.5rem; color: #ff00ff;"># IoT Environmental Monitoring Dashboard</p>
+                <p style="font-size: 0.9rem;">An innovative IoT solution integrating hardware sensors with a modern web dashboard for real-time data visualization, analytics, and automated alerts.</p>
+                <div class="project-tags">
+                  <span class="project-meta">deps:</span>
+                  <span class="skill-tag">React</span> <span class="skill-tag">Node.js</span> <span class="skill-tag">MQTT</span> <span class="skill-tag">Arduino</span> <span class="skill-tag">WebSockets</span>
+                </div>
               </div>
             </div>
           </div>
