@@ -1055,4 +1055,16 @@ nav .nav-items a.active { color: var(--primary); }
   .form-group { margin-bottom: 0.8rem; }
   .social-links { justify-content: center; }
   .footer-links { justify-content: center; }
+  .contact-container {
+    flex-direction: column;
+    gap: 0;
+  }
 }
+
+.contact-container {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
