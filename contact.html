@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anna Patricia Vida | Root Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-left">
+        <a href="index.html" class="logo">>_ root@apv:~#</a>
+        <div class="nav-items">
+          <a href="about.html">~/about</a>
+          <a href="skills.html">~/skills</a>
+          <a href="projects.html">~/projects</a>
+          <a href="certs.html">~/certs</a>
+          <a href="contact.html">~/contact</a>
+        </div>
+      </div>
+      <div class="nav-right">
+        <div class="nav-profile-thumb">
+          <img src="/profile.jpg" alt="Anna Patricia Vida" />
+        </div>
+        <a href="/resume.pdf" target="_blank" class="btn-resume">
+          <i class="fas fa-download"></i> ./resume.sh
+        </a>
+      </div>
+    </nav>
+
+    <main class="container">
+      <!-- Contact Section -->
+      <section id="contact">
+        <h2>$ contact --message</h2>
+        <div style="display: flex; gap: 2rem; flex-wrap: wrap; align-items: stretch;">
+          <!-- Node Info -->
+          <div style="flex: 1; min-width: 300px; display: flex; flex-direction: column;">
+            <p class="prompt">>_ ./network_nodes</p>
+            <div
+              class="terminal-window reveal-on-scroll"
+              style="margin-top: 1rem; flex-grow: 1;"
+            >
+              <div class="terminal-content">
+                <p class="comment">--email</p>
+                <p style="color: var(--primary)">
+                  "annapatriciavida12@gmail.com"
+                </p>
+                <div style="margin-top: 1.5rem">
+                  <p class="comment">--phone</p>
+                  <p style="color: var(--primary)">"09458709064"</p>
+                </div>
+                <div style="margin-top: 1.5rem">
+                  <p class="comment">--github</p>
+                  <p>
+                    <a
+                      href="https://github.com/Ap-bv0829"
+                      target="_blank"
+                      style="color: var(--primary); text-decoration: none"
+                      >"Ap-bv0829"</a
+                    >
+                  </p>
+                </div>
+                <div style="margin-top: 1.5rem">
+                  <p class="comment">--linkedin</p>
+                  <p>
+                    <a
+                      href="https://www.linkedin.com/in/anna-patricia-vida-227176189"
+                      target="_blank"
+                      style="color: var(--primary); text-decoration: none"
+                      >"Anna Patricia Vida"</a
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Send Packet Form -->
+          <div style="flex: 1; min-width: 300px; display: flex; flex-direction: column;">
+            <div
+              class="terminal-window reveal-on-scroll form-terminal"
+              style="border-color: var(--secondary); flex-grow: 1;"
+            >
+              <div
+                class="terminal-header"
+                style="background: rgba(0, 209, 255, 0.1)"
+              >
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <div class="terminal-content">
+                
+                <form id="contact-form" class="contact-form" style="margin-top: 1.5rem">
+                  <div class="form-group">
+                    <p class="comment">--name</p>
+                    <input
+                      type="text"
+                      name="name"
+                      placeholder="Enter your identifier"
+                      required
+                      class="form-input"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <p class="comment">--email</p>
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="Enter return address"
+                      required
+                      class="form-input"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <p class="comment">--payload</p>
+                    <textarea
+                      name="message"
+                      placeholder="Enter message payload..."
+                      required
+                      class="form-input"
+                      style="height: 100px; resize: vertical;"
+                    ></textarea>
+                  </div>
+                  <button
+                    type="submit"
+                    class="btn-cmd form-submit"
+                    style="
+                      width: 100%;
+                      border-color: var(--secondary);
+                      color: var(--secondary);
+                    "
+                  >
+                    <span class="submit-text">>_ send_packet.sh</span>
+                    <span class="submit-loader" style="display: none;">
+                      <i class="fas fa-spinner"></i>
+                    </span>
+                  </button>
+                  <div class="form-message" style="display: none; margin-top: 1rem; padding: 0.8rem; border-radius: 4px; text-align: center; font-size: 0.9rem;"></div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-content">
+        <div class="footer-section footer-bio">
+          <p class="prompt">>_ root@apv:~#</p>
+          <p class="comment">
+            /* IT Professional passionate about creating innovative solutions
+            through code. */
+          </p>
+        </div>
+        <div class="footer-section footer-nav">
+          <p class="prompt">./directories</p>
+          <ul class="footer-links">
+            <li><a href="index.html" class="comment">cd ~/home</a></li>
+            <li><a href="about.html" class="comment">cd ~/about</a></li>
+            <li><a href="projects.html" class="comment">cd ~/projects</a></li>
+            <li><a href="skills.html" class="comment">cd ~/skills</a></li>
+            <li><a href="contact.html" class="comment">cd ~/contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section footer-socials">
+          <p class="prompt">./network_links</p>
+          <div class="social-links">
+            <a
+              href="https://github.com/Ap-bv0829"
+              target="_blank"
+              class="social-icon"
+              title="GitHub"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/anna-patricia-vida-227176189"
+              target="_blank"
+              class="social-icon"
+              title="LinkedIn"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a href="mailto:annapatriciavida12@gmail.com" class="social-icon" title="Email"
+              ><i class="fas fa-envelope"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-divider"></div>
+      <p class="footer-copyright">
+        System.out.println("© 2024 Anna Patricia Vida. All rights reserved.");
+      </p>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

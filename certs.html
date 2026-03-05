@@ -34,55 +34,31 @@
     </nav>
 
     <main class="container">
-      <!-- Hero Section -->
-      <section id="hero">
+      <!-- Achievements Section -->
+      <section id="achievements">
+        <h2>$ achievements --list</h2>
         <div class="terminal-window reveal-on-scroll">
-          <div class="terminal-header">
-            <span class="dot dot-red"></span>
-            <span class="dot dot-yellow"></span>
-            <span class="dot dot-green"></span>
-          </div>
-          <div class="terminal-content">
-            <p>
-              <span class="prompt">> guest@system:~$</span>
-              <span class="cmd">whoami</span>
-            </p>
-            <h1 id="hero-title">
-              Anna Patricia Bolor Vida<span class="cursor">█</span>
-            </h1>
-            <p>
-              <span class="prompt">></span>
-              <span class="cmd" style="color: var(--secondary)"
-                >BS Information Technology Student</span
-              >
-            </p>
-            <p style="margin-top: 0.5rem; color: var(--text-main);">
-              <span class="prompt">></span>
-              <span class="cmd">status --current</span> "Fresh Graduate"
-            </p>
-            <div style="margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.8rem;">
-              <div>
-                <p>
-                  <span class="prompt">></span> 
-                  <span style="color: var(--secondary); font-weight: bold;">Software_Dev</span>
-                </p>
-                <p class="comment" style="padding-left: 1.2rem; margin-top: 0.2rem; font-size: 0.9rem;">
-                  Passionate about building robust web and mobile applications.
-                </p>
-              </div>
-              <div>
-                <p>
-                  <span class="prompt">></span> 
-                  <span style="color: var(--primary); font-weight: bold;">Continuous_Learner</span>
-                </p>
-                <p class="comment" style="padding-left: 1.2rem; margin-top: 0.2rem; font-size: 0.9rem;">
-                  Always exploring new technologies, AI/ML, and cybersecurity.
-                </p>
-              </div>
+          <div
+            class="terminal-content"
+            style="
+              display: grid;
+              grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+              gap: 2rem;
+            "
+          >
+            <div>
+              <h3>[Certifications]</h3>
+              <p class="comment">> Advanced Photonics Technologies (Ateneo)</p>
+              <p class="comment">> Cyber Threat Management (Cisco)</p>
+              <p class="comment">> Operating Systems Basics (Cisco)</p>
             </div>
-            <div class="cta-group" style="margin-top: 2rem">
-              <a href="projects.html" class="btn-cmd">./execute_projects.sh</a>
-              <a href="contact.html" class="btn-cmd btn-outline">ping --contact</a>
+            <div>
+              <h3>[Seminars]</h3>
+              <p class="comment">
+                > Current Trends and Issues in Computing (CTI)
+              </p>
+              <p class="comment">> Fintech Fridays: Cybersecurity for MSMEs</p>
+              <p class="comment">> Python and Data Analytics (Bransmitha)</p>
             </div>
           </div>
         </div>
